@@ -1,0 +1,84 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+html, body {
+	height: 100%;
+}
+
+$body_max_width: 80em; //1280px
+$normal_text_font_size: 0.875em; //14px
+$large_text_font_size: 1em; //16px
+
+body {
+	max-width: $body_max_width;
+	margin: 0 auto;
+	font-size: $normal_text_font_size;
+	padding-right: 0.5em;
+	padding-left: 0.5em;
+}
+
+/*
+Modal containers
+*/
+
+.error-modal-container {
+	font-size: 0.875em;
+}
+
+.actionable-text:hover {
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+@media screen {
+	@media (min-width: 40em) {
+		body {
+			font-size: $large_text_font_size;
+		}
+	}
+}
+
+/* 
+Spinners
+*/
+
+.modal-spinner {
+	display: inline-block;
+	position: relative;
+	width: 80px;
+	height: 80px;
+}
+
+.modal-spinner div {
+	box-sizing: border-box;
+	display: block;
+	position: absolute;
+	width: 64px;
+	height: 64px;
+	margin: 8px;
+	border: 8px solid #fff;
+	border-radius: 50%;
+	animation: modal-spinner 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+	border-color: #fff transparent transparent transparent;
+}
+
+.modal-spinner div:nth-child(1) {
+	animation-delay: -0.45s;
+}
+
+.modal-spinner div:nth-child(2) {
+	animation-delay: -0.3s;
+}
+
+.modal-spinner div:nth-child(3) {
+	animation-delay: -0.15s;
+}
+
+@keyframes modal-spinner {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}

@@ -1,0 +1,54 @@
+{
+	"auth": {
+		"username": "bs_username_here",
+		"access_key": "bs_access_key_here"
+	},
+	"browsers": [
+		{
+			"browser": "chrome",
+			"os": "Windows 10",
+			"versions": [
+				"latest"
+			]
+		},
+		{
+			"browser": "edge",
+			"os": "Windows 10",
+			"versions": [
+				"latest"
+			]
+		},
+		{
+			"browser": "chrome",
+			"os": "OS X Big Sur",
+			"versions": [
+				"latest"
+			]
+		}
+	],
+	"run_settings": {
+		"cypress_config_file": "./cypress.config.ts",
+		"project_name": "Azure Pipeline Angular Website",
+		"build_name": "v0.0.1",
+		"spec_timeout": 20,
+		"specs": [
+			"cypress/e2e/browser-stack/*.cy.ts"
+		],
+		"parallels": "3",
+		"npm_dependencies": {
+			"typescript": "~4.7.2",
+			"@angular/common": "^14.1.0",
+			"@angular/core": "^14.1.0",
+			"rxjs": "~7.5.0",
+			"tslib": "^2.3.0"
+		},
+		"headless": true
+	},
+	"connection_settings": {
+		"local": true,
+		"local_identifier": "azure_pipeline_angular",
+		"local_mode": null,
+		"local_config_file": null
+	},
+	"disable_usage_reporting": false
+}

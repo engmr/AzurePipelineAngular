@@ -1,0 +1,39 @@
+.ssn-tooltip {
+	position: relative;
+	cursor: pointer;
+}
+
+.ssn-tooltip:hover:after {
+	position: absolute;
+	content: attr(text);
+	display: inline-block;
+	left: 0.25em;
+	top: -6.875em;
+	padding: 0.25em 0.25em 0.25em 1em;
+	width: 18.4375em;
+	background-color: #e6e6e6;
+	color: black;
+	border-radius: 0.25em;
+}
+
+.ssn-tooltip-icon {
+	font-size: 1.25em !important;
+	padding: 0 0 0 0.25em;
+	vertical-align: middle;
+}
+
+@media screen {
+	@media (max-width: 33.125em) {
+		.ssn-tooltip:hover::after {
+			top: -8.125em;
+			left: -10em;
+			width: 18.75em;
+		}
+	}
+
+	@media (min-width: 33.1875em) {
+		.ssn-tooltip-icon {
+			padding: 0.0625em 0 0 0.25em;
+		}
+	}
+}

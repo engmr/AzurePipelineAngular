@@ -1,0 +1,53 @@
+{
+  "name": "azure_pipeline_angular",
+  "version": "0.0.1",
+  "scripts": {
+    "ng": "ng",
+    "start-site": "ng serve --configuration=localDev --port 4201 -o",
+    "start-site-dev": "ng serve --configuration=development --port 4201 -o",
+    "start-site-demo": "ng serve --configuration=demo --port 4201 -o",
+    "start-site-stage": "ng serve --configuration=stage --port 4201 -o",
+    "start-site-prod": "ng serve --configuration=production --port 4201 -o",
+    "build": "ng build --configuration=localDev --output-path=\"dist\\localDev\"",
+    "build-dev": "ng build --configuration=development --output-path=\"dist\\dev\"",
+    "build-demo": "ng build --configuration=demo --output-path=\"dist\\demo\"",
+    "build-stage": "ng build --configuration=stage --output-path=\"dist\\stage\"",
+    "build-prod": "ng build --configuration=demo --output-path=\"dist\\prod\"",
+    "unit-tests": "ng test --browsers=ChromeHeadless --watch=false",
+    "unit-tests-gui": "ng test",
+    "unit-tests-watch": "ng test --browsers=ChromeHeadless",
+    "unit-tests-debug": "ng test --browsers=ChromeHeadlessNoSandbox",
+    "e2e-tests": "npx cypress run --spec=cypress/e2e/smoke-tests/*.cy.ts",
+    "e2e-tests-full-regression": "npx cypress run",
+    "e2e-tests-gui": "npx cypress open"
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "^16.1.0",
+    "@angular/common": "^16.1.0",
+    "@angular/compiler": "^16.1.0",
+    "@angular/core": "^16.1.0",
+    "@angular/forms": "^16.1.0",
+    "@angular/material": "^16.1.2",
+    "@angular/platform-browser": "^16.1.0",
+    "@angular/platform-browser-dynamic": "^16.1.0",
+    "@angular/router": "^16.1.0",
+    "rxjs": "~7.8.0",
+    "tslib": "^2.3.0",
+    "zone.js": "~0.13.0"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "^16.1.1",
+    "@angular/cli": "~16.1.1",
+    "@angular/compiler-cli": "^16.1.0",
+    "@types/jasmine": "~4.3.0",
+    "cypress": "^12.16.0",
+    "jasmine-core": "~4.6.0",
+    "karma": "~6.4.0",
+    "karma-chrome-launcher": "~3.2.0",
+    "karma-coverage": "~2.2.0",
+    "karma-jasmine": "~5.1.0",
+    "karma-jasmine-html-reporter": "~2.1.0",
+    "typescript": "~5.1.3"
+  }
+}

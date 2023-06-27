@@ -1,0 +1,6 @@
+<div id="prompt-yes-no-modal-container">
+	<h2 id="prompt-yes-no-modal-title">{{title}}</h2>
+	<p id="prompt-yes-no-modal-prompt">{{prompt}}</p>
+	<button id="prompt-yes-no-modal-yes-button" class="btn btn-primary" (click)="yes()" [disabled]="actionChosen">Yes</button>
+	<button id="prompt-yes-no-modal-no-button" class="btn btn-danger" (click)="no()" [disabled]="actionChosen">No</button>
+</div>
