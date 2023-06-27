@@ -9,6 +9,9 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 
+variables:
+- group: build-script-names
+
 steps:
 - task: NodeTool@0
   inputs:
@@ -19,9 +22,11 @@ steps:
     npm install
   displayName: 'Install Node packages'
 
+- script: echo "Build script:" $(devBuildSriptName)
+
 - script: | 
-    npm run-script build-dev
-  displayName: 'Build (dev config)'
+    npm run-script $(devBuildSriptName)
+  displayName: 'Build'
 
 - script: | 
     npm run-script unit-tests
