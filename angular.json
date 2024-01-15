@@ -96,16 +96,16 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "azure_pipeline_angular:build:production"
+              "buildTarget": "azure_pipeline_angular:build:production"
             },
             "development": {
-              "browserTarget": "azure_pipeline_angular:build:development"
+              "buildTarget": "azure_pipeline_angular:build:development"
             },
             "stage": {
-              "browserTarget": "azure_pipeline_angular:build:stage"
+              "buildTarget": "azure_pipeline_angular:build:stage"
             },
             "localDev": {
-              "browserTarget": "azure_pipeline_angular:build:localDev"
+              "buildTarget": "azure_pipeline_angular:build:localDev"
             }
           },
           "defaultConfiguration": "localDev"
@@ -113,7 +113,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "azure_pipeline_angular:build"
+            "buildTarget": "azure_pipeline_angular:build"
           }
         },
         "test": {
